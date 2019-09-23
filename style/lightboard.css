@@ -1,0 +1,13 @@
+.table-spec {
+    float: left;
+    font-size: 25px;
+    margin: 60px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.currently {
+    font-size: 30px;
+    border: 2px solid #fff;
+}

@@ -1,0 +1,19 @@
+CREATE TABLE specialist(
+    id INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    title varchar(30) not null,
+      updated_at TIMESTAMP NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+      created_at TIMESTAMP NOT NULL
+);
+
+INSERT INTO `specialist`(`title`) VALUES
+('Verslo konsultantas'),
+('Vadybininkas'),
+('Paskolų konsultantas');
+CREATE TABLE clients(
+    id INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    firstname varchar(30) not null,
+    lastname varchar(60),
+    specialist INT(10) NOT NULL,  
+    CONSTRAINT fk_specialist FOREIGN KEY (specialist)
+    REFERENCES specialist(id)
+);
